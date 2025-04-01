@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Pokédex',
         theme: ThemeData(
-          primarySwatch: Colors.red,
+          primarySwatch: Colors.blue,
           brightness: Brightness.dark,
+          scaffoldBackgroundColor: Colors.blue[900],
         ),
         home: const HomeScreens(),
       ),
