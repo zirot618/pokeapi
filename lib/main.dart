@@ -4,6 +4,7 @@ import 'screens/home_screens.dart';
 import 'providers/pokemon_provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       create: (_) => PokemonProvider(),
       child: MaterialApp(
         title: 'Pokédex',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
           brightness: Brightness.dark,
