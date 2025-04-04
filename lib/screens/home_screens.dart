@@ -27,6 +27,9 @@ class _HomeScreensState extends State<HomeScreens> {
     'electric': Colors.yellow,
     'ground': Colors.brown,
     'fairy': Colors.pink,
+    'psychic': Colors.yellow[200]!,
+    'dark': Colors.black,
+    'steel': Colors.grey[600]!,
   };
 
   @override
@@ -189,9 +192,14 @@ class _HomeScreensState extends State<HomeScreens> {
                               Expanded(
                                 flex: 1,
                                 child: Padding(
-                                  padding: const EdgeInsets.all(16),
+                                  padding: const EdgeInsets.only(
+                                    left: 16,
+                                    right: 16,
+                                    top: 8,
+                                    bottom: 16,
+                                  ),
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
                                         pokemon.name.toUpperCase(),
@@ -208,10 +216,10 @@ class _HomeScreensState extends State<HomeScreens> {
                                           ],
                                         ),
                                       ),
-                                      const SizedBox(height: 8),
+                                      const SizedBox(height: 4),
                                       Wrap(
                                         spacing: 8,
-                                        runSpacing: 8,
+                                        runSpacing: 4,
                                         alignment: WrapAlignment.center,
                                         children: pokemon.types.map((type) {
                                           final typeColor = _getTypeColor(type);
